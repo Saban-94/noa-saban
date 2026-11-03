@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800&family=Rubik:wght@500;700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #f4f0e6;
+  --color-bg-deep: #e7e0d1;
+  --color-surface: #fffdf8;
+  --color-surface-2: #f7f3ea;
+  --color-ink: #1c1915;
+  --color-muted: #6f675c;
+  --color-line: #e3d9c6;
+  --color-brand: #9a3412;
+  --color-brand-deep: #7c2d12;
+  --color-sand: #c4a574;
+  --color-moss: #3f6212;
+  --color-moss-soft: #ecfccb;
+  --color-wa: #efeae2;
+  --color-wa-out: #d9fdd3;
+  --color-wa-in: #ffffff;
+  --font-sans: "Heebo", "Segoe UI", sans-serif;
+  --font-display: "Rubik", "Heebo", sans-serif;
+  --radius-card: 1.25rem;
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    background: var(--color-bg);
+    color: var(--color-ink);
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background:
+      radial-gradient(1200px 500px at 100% -10%, #f6e7cf 0%, transparent 55%),
+      radial-gradient(900px 400px at -10% 110%, #e7efd4 0%, transparent 50%),
+      var(--color-bg);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+@utility wa-em {
+  font-weight: 700;
+}
+
+/* WhatsApp-like emphasis: *bold* and _italic_ rendered in chat bubbles */
+.wa-text {
+  white-space: pre-wrap;
+  word-break: break-word;
+  line-height: 1.55;
+}
